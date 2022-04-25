@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>MIP spēlīte ar monētām</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="coin.js"></script>
+    <script src="minimax.js"></script>
+</head>
+
+<body>
+    <br/>
+    <center>
+        <div id="start-screen">
+            <select name="stackcoins" id="coinValues">
+                <option value="1">1 cent</option>
+                <option value="2">2 cent</option>
+                <option value="5">5 cent</option>
+                <option value="10">10 cent</option>
+            </select>
+            <button onclick="addCoins()">Add coin to stack</button>
+            <br/>
+            <button onclick="removeCoins()">Remove coin from stack</button>
+            <br/>
+            <br/>
+            Coin stack: <div id="moneyStack-preview"></div>
+            <br/>
+            First turn: <select name="firstTurn" id="firstTurn">
+                <option value="player">Player</option>
+                <option value="computer">AI</option>
+            </select>
+            <br/>
+            <br/>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+        <div id="game-screen">
+            <table>
+                <tr>
+                    <th>Player</th>
+                    <th>Money</th>
+                    <th>AI</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button onclick="playerTakeCoins()" id="takeCoinsButton">Take</button></td>
+                    <td><button onclick="playerRemoveCoins()" id="removeCoinsButton">Remove</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="playerCoins"></div>
+                    </td>
+                    <td>
+                        <div id="moneyStack"></div>
+                    </td>
+                    <td>
+                        <div id="AICoins"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Points:
+                        <div id="player-points">0</div>
+                    </td>
+                    <td></td>
+                    <td>Points:
+                        <div id="ai-points">0</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+    </center>
+    <script>
+        let game = new CoinGame();
+    </script>
+</body>
+
+</html>

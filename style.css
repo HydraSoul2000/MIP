@@ -1,0 +1,25 @@
+table {
+    text-align: center;
+}
+
+th {
+    background-color: #04AA6D;
+    color: white;
+    width: 30%;
+}
+
+.coin {
+    background-color: #ffe600;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+}
+
+#game-screen {
+    display: none;
+}
